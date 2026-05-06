@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,79 +7,84 @@
     <title>Bella Event & Decor - Inquiry Form</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #C5A021; --dark-gold: #967A16; --light-bg: #FCF9F2; }
+        :root { --gold: #C5A021; --dark-gold: #967A16; --white-trans: rgba(255, 255, 255, 0.92); }
 
         body { 
             font-family: 'Poppins', sans-serif; 
-            background-image: url('https://images.unsplash.com/photo-1519222970733-f546218fa6d7'); 
+            /* Sawirkaaga quruxda badan ayaa halkan ku jira */
+            background-image: url('https://raw.githubusercontent.com/ahmeddahir17/Bella-event/main/image_59.png'); 
             background-size: cover; 
             background-position: center; 
             background-attachment: fixed;
-            color: #444; 
+            color: #333; 
             margin: 0; 
             padding: 20px 10px; 
         }
 
         .form-container { 
             width: 100%; 
-            max-width: 700px; 
-            background: rgba(255, 255, 255, 0.9); 
-            margin: 0 auto; 
-            padding: 40px 30px; 
-            border-radius: 20px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            max-width: 650px; 
+            background: var(--white-trans); 
+            margin: 40px auto; 
+            padding: 40px 35px; 
+            border-radius: 25px; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+            border: 1px solid rgba(197, 160, 33, 0.2);
         }
 
-        h1 { font-family: 'Playfair Display', serif; color: var(--gold); text-align: center; font-size: 2.5rem; margin-bottom: 5px; }
-        p.subtitle { text-align: center; font-style: italic; margin-bottom: 30px; color: #666; }
+        h1 { font-family: 'Playfair Display', serif; color: var(--gold); text-align: center; font-size: 2.8rem; margin-bottom: 5px; }
+        p.subtitle { text-align: center; font-style: italic; margin-bottom: 35px; color: #555; font-weight: 400; }
 
-        .form-group { margin-bottom: 25px; }
-        label { font-weight: 600; display: block; margin-bottom: 10px; font-size: 1rem; }
+        .form-group { margin-bottom: 22px; }
+        label { font-weight: 600; display: block; margin-bottom: 8px; color: #444; }
         
         input[type="text"], input[type="email"], input[type="date"], select, textarea {
-            width: 100%; padding: 12px; border: 1px solid #E0E0E0; border-radius: 10px; font-size: 16px; box-sizing: border-box;
+            width: 100%; padding: 14px; border: 1px solid #CCC; border-radius: 12px; font-size: 16px; box-sizing: border-box; background: #fff;
         }
 
-        .option-item { display: flex; align-items: center; padding: 10px; margin-bottom: 5px; cursor: pointer; }
-        .option-item input { margin-right: 15px; width: 18px; height: 18px; accent-color: var(--gold); }
+        .option-item { display: flex; align-items: center; padding: 8px 0; cursor: pointer; }
+        .option-item input { margin-right: 12px; width: 18px; height: 18px; accent-color: var(--gold); }
 
         button { 
             background: linear-gradient(135deg, var(--gold), var(--dark-gold)); 
-            color: white; border: none; padding: 18px; width: 100%; 
-            border-radius: 10px; font-size: 1.1rem; font-weight: 600; cursor: pointer;
+            color: white; border: none; padding: 20px; width: 100%; 
+            border-radius: 12px; font-size: 1.2rem; font-weight: 600; cursor: pointer;
+            margin-top: 15px; transition: 0.3s;
         }
         
-        footer { text-align: center; margin-top: 30px; color: #666; font-size: 0.85rem; }
+        button:hover { opacity: 0.9; transform: translateY(-2px); }
+        
+        footer { text-align: center; margin-top: 40px; color: #fff; font-size: 0.9rem; text-shadow: 1px 1px 4px rgba(0,0,0,0.8); }
     </style>
 </head>
 <body>
 
 <div class="form-container">
     <h1>Bella Event & Decor</h1>
-    <p class="subtitle">Client Inquiry Form - Welcome!</p>
+    <p class="subtitle">We Design. You Celebrate.</p>
 
     <form action="https://formspree.io/f/mqenbond" method="POST">
         <div class="form-group">
             <label>1. Full Name</label>
-            <input type="text" name="full_name" required placeholder="Enter your full name">
+            <input type="text" name="full_name" required placeholder="Enter your name">
         </div>
 
         <div class="form-group">
             <label>2. Phone Number</label>
-            <input type="text" name="phone_number" required placeholder="Enter your phone number">
+            <input type="text" name="phone_number" required placeholder="Enter your contact number">
         </div>
 
         <div class="form-group">
             <label>3. Email Address</label>
-            <input type="email" name="email" required placeholder="Enter your email address">
+            <input type="email" name="email" required placeholder="Enter your email">
         </div>
 
         <div class="form-group">
             <label>4. Event Type</label>
-            <div class="option-item"><input type="radio" name="event_type" value="Birthday" required> Birthday Party</div>
-            <div class="option-item"><input type="radio" name="event_type" value="Wedding"> Wedding</div>
+            <div class="option-item"><input type="radio" name="event_type" value="Wedding" required> Wedding</div>
+            <div class="option-item"><input type="radio" name="event_type" value="Birthday"> Birthday Party</div>
             <div class="option-item"><input type="radio" name="event_type" value="Engagement"> Engagement</div>
-            <div class="option-item"><input type="radio" name="event_type" value="Other"> Other</div>
+            <div class="option-item"><input type="radio" name="event_type" value="Corporate"> Corporate Event</div>
         </div>
 
         <div class="form-group">
@@ -87,43 +93,30 @@
         </div>
 
         <div class="form-group">
-            <label>6. Event Location</label>
-            <input type="text" name="location" placeholder="City or Venue Name">
+            <label>6. Estimated Guests</label>
+            <input type="text" name="guests" placeholder="e.g. 150 guests">
         </div>
 
         <div class="form-group">
-            <label>7. Estimated Number of Guests</label>
-            <input type="text" name="guests" placeholder="e.g. 50, 100, 200+">
+            <label>7. Decor Budget Range</label>
+            <input type="text" name="budget" placeholder="Enter your budget">
         </div>
 
         <div class="form-group">
-            <label>8. What is your estimated budget for decor?</label>
-            <input type="text" name="budget" placeholder="Enter your budget range">
+            <label>8. Theme or Colors</label>
+            <input type="text" name="theme" placeholder="e.g. White and Gold">
         </div>
 
         <div class="form-group">
-            <label>9. Desired Color Palette/Theme</label>
-            <input type="text" name="theme" placeholder="e.g. Gold and White">
+            <label>9. Tell us more details</label>
+            <textarea name="details" rows="4" placeholder="Any special requests?"></textarea>
         </div>
 
-        <div class="form-group">
-            <label>10. Which services are you interested in?</label>
-            <div class="option-item"><input type="checkbox" name="service" value="Full Decor"> Full Venue Decoration</div>
-            <div class="option-item"><input type="checkbox" name="service" value="Table Setting"> Table Setting & Linens</div>
-            <div class="option-item"><input type="checkbox" name="service" value="Backdrop"> Backdrop & Photo Area</div>
-            <div class="option-item"><input type="checkbox" name="service" value="Flowers"> Floral Arrangements</div>
-        </div>
-
-        <div class="form-group">
-            <label>11. Any additional details or special requests?</label>
-            <textarea name="message" rows="4" placeholder="Tell us more about your dream event..."></textarea>
-        </div>
-
-        <button type="submit">Submit Inquiry</button>
+        <button type="submit">Send Inquiry</button>
     </form>
-    
-    <footer>© 2026 Bella Event & Decor. All rights reserved.</footer>
 </div>
+
+<footer>© 2026 Bella Event & Decor. All rights reserved.</footer>
 
 </body>
 </html>
