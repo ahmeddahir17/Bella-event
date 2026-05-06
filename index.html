@@ -8,40 +8,120 @@
     <style>
         :root { --gold: #C5A021; --dark-gold: #967A16; --light-bg: #FCF9F2; }
         body { font-family: 'Poppins', sans-serif; background-color: var(--light-bg); color: #444; margin: 0; padding: 20px 10px; }
-        .form-container { width: 100%; max-width: 650px; background: #ffffff; margin: 0 auto; padding: 40px 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 1px solid rgba(197, 160, 33, 0.2); }
+        .form-container { width: 100%; max-width: 700px; background: #ffffff; margin: 0 auto; padding: 40px 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 1px solid rgba(197, 160, 33, 0.2); }
         h1 { font-family: 'Playfair Display', serif; color: var(--gold); text-align: center; font-size: 2.5rem; margin-bottom: 5px; }
-        p.subtitle { text-align: center; font-style: italic; margin-bottom: 40px; color: #888; }
-        .section-header { background: var(--light-bg); padding: 10px 15px; border-left: 4px solid var(--gold); margin: 30px 0 20px 0; font-weight: 600; color: var(--dark-gold); font-size: 0.9rem; text-transform: uppercase; }
+        p.subtitle { text-align: center; font-style: italic; margin-bottom: 30px; color: #888; }
         .form-group { margin-bottom: 25px; }
-        label { font-weight: 600; display: block; margin-bottom: 10px; }
-        input, select, textarea { width: 100%; padding: 15px; border: 1px solid #E0E0E0; border-radius: 10px; font-size: 16px; background-color: #FAFAFA; box-sizing: border-box; }
-        input:focus { border-color: var(--gold); background-color: #fff; outline: none; }
-        .option-item { display: flex; align-items: center; padding: 12px 15px; margin-bottom: 10px; border: 1px solid #F0F0F0; border-radius: 10px; cursor: pointer; }
-        .option-item input { width: 20px; height: 20px; margin-right: 15px; accent-color: var(--gold); }
+        label { font-weight: 600; display: block; margin-bottom: 10px; font-size: 1rem; }
+        input[type="text"], input[type="email"], input[type="date"], select, textarea { 
+            width: 100%; padding: 12px; border: 1px solid #E0E0E0; border-radius: 10px; font-size: 16px; background-color: #FAFAFA; box-sizing: border-box; 
+        }
+        .option-item { display: flex; align-items: center; padding: 10px; margin-bottom: 5px; cursor: pointer; }
+        .option-item input { margin-right: 15px; width: 18px; height: 18px; accent-color: var(--gold); }
         button { background: linear-gradient(135deg, var(--gold), var(--dark-gold)); color: white; border: none; padding: 18px; font-size: 1.1rem; font-weight: 600; border-radius: 12px; cursor: pointer; width: 100%; margin-top: 20px; box-shadow: 0 5px 15px rgba(197, 160, 33, 0.3); }
         footer { text-align: center; margin-top: 30px; color: #AAA; font-size: 0.85rem; }
-        @media (max-width: 600px) { h1 { font-size: 2rem; } .form-container { padding: 25px 20px; } }
     </style>
 </head>
 <body>
+
 <div class="form-container">
     <h1>Bella Event & Decor</h1>
-    <p class="subtitle">Making your special moments unforgettable</p>
-    <form action="#" method="post">
-        <div class="section-header">Personal Information</div>
-        <div class="form-group"><label>Full Name</label><input type="text" placeholder="Full Name"></div>
-        <div class="form-group"><label>Phone Number</label><input type="text" placeholder="+123 456 789"></div>
-        <div class="section-header">Event Details</div>
+    <p class="subtitle">Client Inquiry Form - Welcome!</p>
+
+    <form action="https://formspree.io/f/meqybvzl" method="POST">
+        
         <div class="form-group">
-            <label>Event Type</label>
-            <label class="option-item"><input type="radio" name="et" value="Wedding"> Wedding Ceremony</label>
-            <label class="option-item"><input type="radio" name="et" value="Birthday"> Birthday Party</label>
-            <label class="option-item"><input type="radio" name="et" value="Corporate"> Corporate Event</label>
+            <label>1. Full Name</label>
+            <input type="text" name="full_name" required placeholder="Enter your full name">
         </div>
-        <div class="form-group"><label>Event Date</label><input type="date"></div>
-        <button type="submit">Request a Quote</button>
+
+        <div class="form-group">
+            <label>2. Phone Number</label>
+            <input type="text" name="phone" required placeholder="Enter your phone number">
+        </div>
+
+        <div class="form-group">
+            <label>3. Email Address</label>
+            <input type="email" name="email" required placeholder="Enter your email address">
+        </div>
+
+        <div class="form-group">
+            <label>4. Event Type</label>
+            <label class="option-item"><input type="radio" name="event_type" value="Birthday"> Birthday Party</label>
+            <label class="option-item"><input type="radio" name="event_type" value="Wedding"> Wedding</label>
+            <label class="option-item"><input type="radio" name="event_type" value="Baby Shower"> Baby Shower</label>
+            <label class="option-item"><input type="radio" name="event_type" value="Bridal Shower"> Bridal Shower</label>
+            <label class="option-item"><input type="radio" name="event_type" value="Corporate"> Corporate Event</label>
+            <label class="option-item"><input type="radio" name="event_type" value="Graduation"> Graduation</label>
+            <label class="option-item"><input type="radio" name="event_type" value="Other"> Other</label>
+        </div>
+
+        <div class="form-group">
+            <label>5. Event Date</label>
+            <input type="date" name="event_date" required>
+        </div>
+
+        <div class="form-group">
+            <label>6. Event Location/Venue Name</label>
+            <input type="text" name="location" placeholder="Enter venue name or address">
+        </div>
+
+        <div class="form-group">
+            <label>7. Estimated Number of Guests</label>
+            <input type="text" name="guests" placeholder="e.g. 100">
+        </div>
+
+        <div class="form-group">
+            <label>8. What is your estimated budget for decor?</label>
+            <input type="text" name="budget" placeholder="Enter your budget range">
+        </div>
+
+        <div class="form-group">
+            <label>9. Desired Color Palette/Theme</label>
+            <input type="text" name="theme" placeholder="e.g. Gold and White">
+        </div>
+
+        <div class="form-group">
+            <label>10. Which services are you interested in?</label>
+            <label class="option-item"><input type="checkbox" name="services" value="Full Decor"> Full Venue Decoration</label>
+            <label class="option-item"><input type="checkbox" name="services" value="Table Styling"> Table Styling & Linens</label>
+            <label class="option-item"><input type="checkbox" name="services" value="Backdrop"> Backdrop & Photo Booth</label>
+            <label class="option-item"><input type="checkbox" name="services" value="Florals"> Floral Arrangements</label>
+            <label class="option-item"><input type="checkbox" name="services" value="Lighting"> Lighting</label>
+        </div>
+
+        <div class="form-group">
+            <label>11. Do you have a specific start and end time for the event?</label>
+            <input type="text" name="event_time" placeholder="e.g. 4 PM - 10 PM">
+        </div>
+
+        <div class="form-group">
+            <label>12. How did you hear about us?</label>
+            <select name="referral">
+                <option value="Instagram">Instagram</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Tiktok">TikTok</option>
+                <option value="Friend">Friend/Family</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>13. Any additional details or special requests?</label>
+            <textarea name="message" rows="4" placeholder="Tell us more..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>14. Would you like to schedule a consultation call?</label>
+            <label class="option-item"><input type="radio" name="consultation" value="Yes"> Yes</label>
+            <label class="option-item"><input type="radio" name="consultation" value="No"> No</label>
+        </div>
+
+        <button type="submit">Submit Inquiry</button>
     </form>
-    <footer>&copy; 2026 Bella Event & Decor.</footer>
+
+    <footer>&copy; 2026 Bella Event & Decor. All rights reserved.</footer>
 </div>
+
 </body>
 </html>
