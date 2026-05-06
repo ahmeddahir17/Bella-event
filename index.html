@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella Event & Decor - Inquiry Form</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f9f9f9; color: #333; line-height: 1.6; padding: 10px; }
+        .form-container { width: 95%; max-width: 700px; background: #fff; margin: 20px auto; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 8px solid #d4af37; }
+        h1 { color: #d4af37; text-align: center; margin-bottom: 5px; font-size: 1.8rem; }
+        p.subtitle { text-align: center; font-style: italic; margin-bottom: 30px; color: #666; }
+        .section-divider { border-top: 1px solid #eee; margin: 25px 0; }
+        .form-group { margin-bottom: 20px; }
+        label { font-weight: bold; display: block; margin-bottom: 8px; }
+        input[type="text"], input[type="email"], input[type="date"], select, textarea {
+            width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-size: 16px;
+        }
+        .option-item { display: flex; align-items: center; margin-bottom: 10px; cursor: pointer; }
+        .option-item input { margin-right: 12px; width: 18px; height: 18px; }
+        button { background-color: #d4af37; color: white; border: none; padding: 15px; font-size: 18px; border-radius: 6px; cursor: pointer; width: 100%; margin-top: 10px; transition: 0.3s; }
+        button:hover { background-color: #b8962d; }
+
+        @media (max-width: 600px) {
+            .form-container { padding: 15px; width: 100%; margin: 10px 0; }
+            h1 { font-size: 1.5rem; }
+        }
+        footer { text-align: center; margin-top: 20px; font-weight: bold; color: #d4af37; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h1>Bella Event & Decor</h1>
+    <p class="subtitle">Client Inquiry Form - Welcome!</p>
+
+    <form action="#" method="post">
+        
+        <div class="form-group">
+            <label>1. Full Name</label>
+            <input type="text" name="name" placeholder="Enter your full name">
+        </div>
+
+        <div class="form-group">
+            <label>2. Phone Number</label>
+            <input type="text" name="phone" placeholder="Enter your phone number">
+        </div>
+
+        <div class="form-group">
+            <label>3. Email Address</label>
+            <input type="email" name="email" placeholder="Enter your email address">
+        </div>
+
+        <div class="form-group">
+            <label>4. Event Type</label>
+            <div class="options-group">
+                <label class="option-item"><input type="radio" name="event_type" value="Birthday"> Birthday Party</label>
+                <label class="option-item"><input type="radio" name="event_type" value="Wedding"> Wedding</label>
+                <label class="option-item"><input type="radio" name="event_type" value="Baby Shower"> Baby Shower</label>
+                <label class="option-item"><input type="radio" name="event_type" value="Bridal Shower"> Bridal Shower</label>
+                <label class="option-item"><input type="radio" name="event_type" value="Corporate"> Corporate Event</label>
+                <label class="option-item"><input type="radio" name="event_type" value="Graduation"> Graduation</label>
+                <label class="option-item"><input type="radio" name="event_type" value="Other"> Other</label>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="form-group">
+            <label>5. Event Date</label>
+            <input type="date" name="date">
+        </div>
+
+        <div class="form-group">
+            <label>6. Event Location (City/Venue if known)</label>
+            <input type="text" name="location" placeholder="City or venue name">
+        </div>
+
+        <div class="form-group">
+            <label>7. Estimated Number of Guests</label>
+            <input type="text" name="guests" placeholder="Approximate guest count">
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="form-group">
+            <label>8. Which Package Are You Interested In?</label>
+            <div class="options-group">
+                <label class="option-item"><input type="radio" name="package" value="Basic"> Basic Package</label>
+                <label class="option-item"><input type="radio" name="package" value="Standard"> Standard Package</label>
+                <label class="option-item"><input type="radio" name="package" value="Premium"> Premium Package</label>
+                <label class="option-item"><input type="radio" name="package" value="Luxury"> Luxury Package</label>
+                <label class="option-item"><input type="radio" name="package" value="Not Sure"> Not Sure (Need Help Choosing)</label>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="form-group">
+            <label>9. Select Any Add-Ons You’d Like</label>
+            <div class="options-group">
+                <label class="option-item"><input type="checkbox" name="addons" value="Backdrop"> Backdrop & Draping</label>
+                <label class="option-item"><input type="checkbox" name="addons" value="Balloon"> Balloon Garland</label>
+                <label class="option-item"><input type="checkbox" name="addons" value="Table"> Custom Table Settings</label>
+                <label class="option-item"><input type="checkbox" name="addons" value="Dessert"> Dessert Table Styling</label>
+                <label class="option-item"><input type="checkbox" name="addons" value="Catering"> Catering</label>
+                <label class="option-item"><input type="checkbox" name="addons" value="DJ"> DJ Services</label>
+                <label class="option-item"><input type="checkbox" name="addons" value="Flower"> Flower Arrangements</label>
+                <label class="option-item"><input type="checkbox" name="addons" value="Marquee"> Marquee Numbers/Letters</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>10. Theme / Color Scheme / Vision</label>
+            <textarea name="vision" rows="4" placeholder="Tell us your vision, inspiration, colors, Pinterest ideas, vibe..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>11. Budget Range</label>
+            <select name="budget">
+                <option value="800-1500">$800 – $1,500</option>
+                <option value="1500-3000">$1,500 – $3,000</option>
+                <option value="3000-5000">$3,000 – $5,000</option>
+                <option value="5000+">$5,000+</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>12. How Did You Hear About Us?</label>
+            <div class="options-group">
+                <label class="option-item"><input type="radio" name="source" value="Instagram"> Instagram</label>
+                <label class="option-item"><input type="radio" name="source" value="Referral"> Referral</label>
+                <label class="option-item"><input type="radio" name="source" value="Google"> Google</label>
+                <label class="option-item"><input type="radio" name="source" value="Other"> Other</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>13. Preferred Method of Contact</label>
+            <div class="options-group">
+                <label class="option-item"><input type="radio" name="contact" value="Phone"> Phone Call</label>
+                <label class="option-item"><input type="radio" name="contact" value="Text"> Text Message</label>
+                <label class="option-item"><input type="radio" name="contact" value="Email"> Email</label>
+                <label class="option-item"><input type="radio" name="contact" value="DM"> Instagram DM</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>14. Additional Notes or Special Requests</label>
+            <textarea name="notes" rows="3" placeholder="Anything else you’d like us to know?"></textarea>
+        </div>
+
+        <button type="submit">Submit Inquiry</button>
+    </form>
+
+    <footer>✨ Thank you for choosing Bella Event & Decor!</footer>
+</div>
+
+</body>
+</html>
